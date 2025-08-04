@@ -160,6 +160,9 @@ namespace EvolveGames
 
                 if (Items != null && Items.CompareTag("LocalOnly"))
                     Items.gameObject.SetActive(false);
+
+                if (TryGetComponent(out PlayerWeapon playerWeapon))
+                    playerWeapon.InitializeWeapons(Camera.transform);
             }
         }
 
